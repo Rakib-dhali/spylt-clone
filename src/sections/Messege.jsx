@@ -53,7 +53,7 @@ const Message = () => {
     const paraTl = gsap.timeline({
       delay: 1,
       scrollTrigger: {
-        trigger: '.message-content p',
+        trigger: '.message-content',
         start: 'top center',
       },
     });

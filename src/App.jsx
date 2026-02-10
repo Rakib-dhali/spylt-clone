@@ -3,6 +3,7 @@ import Nav from './components/Nav';
 import Hero from './sections/Hero';
 import { ScrollTrigger } from 'gsap/all';
 import Message from './sections/Messege';
+import FlavorSection from './sections/FlavorSection';
 
 gsap.registerPlugin(ScrollTrigger);
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
       <Nav />
       <Hero />
       <Message/>
+      <FlavorSection/>
     </main>
   );
 };
