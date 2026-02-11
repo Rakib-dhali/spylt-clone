@@ -26,7 +26,6 @@ const FlavorTitle = () => {
       scrollTrigger: {
         trigger: '.flavor-section',
         start: 'top 20%',
-        markers: true,
       },
     });
     gsap.from(secondTextSplit.chars, {
