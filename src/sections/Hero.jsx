@@ -5,7 +5,7 @@ import { ScrollTrigger, SplitText } from 'gsap/all';
 const Hero = () => {
   useGSAP(() => {
     const titleSplit = SplitText.create('.hero-title', { type: 'chars' });
-    const tl = gsap.timeline({ delay: 1 });
+    const tl = gsap.timeline({ delay: 0.5 });
     tl.to('.hero-content', { opacity: 100, y: 0, ease: 'power1.inOut' })
       .to(
         '.hero-text-scroll',
