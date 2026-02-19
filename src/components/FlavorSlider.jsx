@@ -2,47 +2,62 @@ import { useGSAP } from '@gsap/react';
 import { flavorLists } from '../constants';
 import gsap from 'gsap';
 import { useRef } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 const FlavorSlider = () => {
   const sliderRef = useRef();
-
+  const isMobile = useMediaQuery({
+    query: '(max-width:768px)',
+  });
   useGSAP(() => {
-    const scrollAmount = sliderRef.current.scrollWidth - window.innerWidth;
+    if (!isMobile) {
+      const scrollAmount = sliderRef.current.scrollWidth - window.innerWidth;
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.flavor-section',
-        start: '2% top',
-        end: `+=${scrollAmount + 1300}px`,
-        pin: true,
-        scrub:true,
-      },
-    });
-    tl.to('.flavor-section', {
-      x: `-${scrollAmount + 1300}px`,
-      
-    });
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.flavor-section',
+          start: '2% top',
+          end: `+=${scrollAmount + 1300}px`,
+          pin: true,
+          scrub: true,
+        },
+      });
+      tl.to('.flavor-section', {
+        x: `-${scrollAmount + 1300}px`,
+      });
 
-    const titleTL = gsap.timeline({
-      scrollTrigger:{
-        trigger:'.flavor-section',
-        start: 'top top',
-        end: "bottom 80%",
-        scrub:true,
-      }
-    })
+      const titleTL = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.flavor-section',
+          start: 'top top',
+          end: 'bottom 80%',
+          scrub: true,
+        },
+      });
 
-    titleTL.to('.first-text-split', {
-      xPercent: -30,
-      ease:'power1.inOut'
-    }).to('.flavor-text.scroll',{
-      xPercent: -33,
-      ease:'power1.inOut'
-    }, '<').to('.second-text-split', {
-      xPercent: -10,
-      ease:'power1.inOut',
-    },'<')
-  })
+      titleTL
+        .to('.first-text-split', {
+          xPercent: -30,
+          ease: 'power1.inOut',
+        })
+        .to(
+          '.flavor-text.scroll',
+          {
+            xPercent: -33,
+            ease: 'power1.inOut',
+          },
+          '<',
+        )
+        .to(
+          '.second-text-split',
+          {
+            xPercent: -10,
+            ease: 'power1.inOut',
+          },
+          '<',
+        );
+    }
+  });
 
   return (
     <div ref={sliderRef} className="slider-wrapper">

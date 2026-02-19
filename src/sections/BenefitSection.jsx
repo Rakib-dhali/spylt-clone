@@ -2,6 +2,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import ClipPathTitle from '../components/ClipPathTitle';
 import { SplitText } from 'gsap/all';
+import VideoPinSection from '../components/videoPinSection';
 
 const BenefitSection = () => {
   useGSAP(() => {
@@ -94,6 +95,9 @@ const BenefitSection = () => {
           <div className="md:mt-0 mt-10">
             <p className='last-para'>add much more ...</p>
           </div>
+        </div>
+        <div className="relative overlay-box">
+           <VideoPinSection />
         </div>
       </div>
     </section>
