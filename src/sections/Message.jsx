@@ -33,7 +33,7 @@ const Message = () => {
       scrollTrigger: {
         trigger: '.second-msg',
         start: 'top center',
-        end: '30% center',
+        end: 'bottom center',
         scrub: true,
       },
     });
@@ -53,8 +53,8 @@ const Message = () => {
     const paraTl = gsap.timeline({
       delay: 1,
       scrollTrigger: {
-        trigger: '.message-content',
-        start: 'top center',
+        trigger: '.message-content p',
+        start: 'top 60%',
       },
     });
     paraTl.from(paragraphSplit.words, {
