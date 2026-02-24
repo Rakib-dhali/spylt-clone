@@ -1,16 +1,80 @@
-# React + Vite
+# SPYLT Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend recreation and learning project inspired by **[Spylt](https://www.spylt.com/)** — the Awwwards-winning website for high-protein caffeinated chocolate milk (designed by Tubik Studio).
 
-Currently, two official plugins are available:
+Focus: smooth scroll animations, modern product-focused layout, responsive design, and engaging micro-interactions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Built with **React**, **Vite**, **Tailwind CSS**, and **GSAP** (with ScrollTrigger for scroll-based effects).
 
-## React Compiler
+![Hero / scroll section preview – replace with your screenshot](./public/preview.png)  
+*(Add real screenshots/GIFs of your animations later)*
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- GSAP-powered scroll-triggered animations and reveals
+- Utility-first styling with Tailwind CSS
+- Responsive design (mobile-first approach)
+- Clean, component-based React structure
+- Lightning-fast development with Vite + HMR
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- **React** 18 (Vite + React plugin)
+- **Vite** — next-gen frontend tooling
+- **Tailwind CSS** — for rapid, consistent styling
+- **GSAP** (GreenSock) + **ScrollTrigger** — high-performance animations
+- JavaScript + modern CSS
+- ESLint (keeping code clean)
+
+## 🚀 Quick Start
+
+```bash
+# 1. Clone
+git clone https://github.com/Rakib-dhali/spylt-clone.git
+cd spylt-clone
+
+# 2. Install dependencies (includes gsap & tailwindcss)
+npm install
+# or yarn install / pnpm install
+
+# 3. Start dev server
+npm run dev
+# → http://localhost:5173
+## 🚀 Quick Start
+
+```bash
+# 1. Clone
+git clone https://github.com/Rakib-dhali/spylt-clone.git
+cd spylt-clone
+
+# 2. Install
+npm install
+# or yarn install / pnpm install
+
+# 3. Run dev server
+npm run dev
+# → http://localhost:5173
+
+spylt-clone/
+├── public/               # static files (images, favicon…)
+├── src/
+│   ├── assets/           # images, icons…
+│   ├── components/       # reusable pieces
+│   ├── sections/         # page sections (hero, products…)
+│   ├── App.jsx
+│   └── main.jsx
+├── index.html
+├── package.json
+├── vite.config.js
+└── eslint.config.js
+
+
+
+Credits / Inspiration
+
+Real site: https://www.spylt.com
+Design studio: Tubik (Awwwards winning style)
+Built with love in Dinajpur
+
+MIT License – feel free to fork/learn/use for non-commercial purposes.
+Made by Rakib · 2026
